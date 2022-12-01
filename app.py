@@ -157,6 +157,7 @@ df3['Three_Letter_Country_Code'] = df3['Three_Letter_Country_Code'].replace(['US
 df_map = df_map.merge(df3, how = 'inner', left_on = 'country', right_on = 'Three_Letter_Country_Code')
 df_map = df_map.drop(['Three_Letter_Country_Code'],axis=1)
 df_map.rename(columns = {'Continent_Name':'continent'}, inplace = True)
+df_map=df_map.replace('EUA','USA')
 
 fig_mapa = px.scatter_geo(df_map, locations="country", color="continent",
                      hover_name="country", size="students",
