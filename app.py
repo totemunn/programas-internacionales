@@ -16,6 +16,7 @@ with open('style.css') as f:
 
 st.title('🌎 Dashboard - Programas Internacionales')
 df=pd.read_csv('https://raw.githubusercontent.com/totemunn/programas-internacionales/main/df_prog.csv')
+df=df.replace('EUA','USA')
 
 st.sidebar.header("🌎 Dashboard - Programas Internacionales")
 
