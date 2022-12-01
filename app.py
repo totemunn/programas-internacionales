@@ -149,7 +149,7 @@ df_map=pd.DataFrame(df_map)
 df_map=df_map.reset_index()
 df_map=df_map.rename(columns={'index':'country','country':'students'})
 
-df3 = pd.read_csv('https://github.com/totemunn/programas-internacionales/blob/6a1a987ed6b01afaaf7a85d698dff36a17130101/country-and-continent-codes-list.csv')
+df3 = pd.read_csv('country-and-continent-codes-list.csv')
 df3=df3.drop(['Continent_Code','Country_Name','Two_Letter_Country_Code','Country_Number'],axis=1)
 df3['Three_Letter_Country_Code'] = df3['Three_Letter_Country_Code'].replace(['USA'], 'EUA')
 
