@@ -15,7 +15,7 @@ with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 st.title('🌎 Dashboard - Programas Internacionales')
-df=pd.read_csv('df_prog.csv')
+df=pd.read_csv('https://raw.githubusercontent.com/totemunn/programas-internacionales/main/df_prog.csv')
 
 st.sidebar.header("🌎 Dashboard - Programas Internacionales")
 
@@ -81,7 +81,7 @@ with st.container():
 
     st.markdown("<h1 style='text-align: center; color: #F33A6A; font-size: 18px;'>El 93.6% de los alumnos quedan en su primer opción; el resto de los alumnos quedan en otra.</h1>", unsafe_allow_html=True)
 
-df_sank=pd.read_csv('df_prog.csv')
+df_sank=pd.read_csv('https://raw.githubusercontent.com/totemunn/programas-internacionales/main/df_prog.csv')
 
 
 df_sank = df[['school', 'type', 'continent']]
@@ -149,7 +149,7 @@ df_map=pd.DataFrame(df_map)
 df_map=df_map.reset_index()
 df_map=df_map.rename(columns={'index':'country','country':'students'})
 
-df3 = pd.read_csv('country-and-continent-codes-list-csv.csv')
+df3 = pd.read_csv('https://github.com/totemunn/programas-internacionales/blob/6a1a987ed6b01afaaf7a85d698dff36a17130101/country-and-continent-codes-list.csv')
 df3=df3.drop(['Continent_Code','Country_Name','Two_Letter_Country_Code','Country_Number'],axis=1)
 df3['Three_Letter_Country_Code'] = df3['Three_Letter_Country_Code'].replace(['USA'], 'EUA')
 
